@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>District</th>
+        <th>Address</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+    	{% for rrc in list %}	
+      	<tr>
+        	<td><a href="/rrc/{{rrc.id}}">{{rrc.name}}</a></td>
+        	<td>{{rrc.district}}</td>
+        	<td>{{rrc.address}}</td>
+        	<td>{{rrc.contact}}</td>
+      	</tr>
+      	{% endfor%}
+    </tbody>
+  </table>
+
+	
+{% endblock content %}
+
+
+
+
