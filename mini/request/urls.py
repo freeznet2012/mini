@@ -18,6 +18,6 @@ from django.conf.urls import include, url
 from . import views
 urlpatterns = [
     url(r'^create/', views.create, name='create'),
-	url(r'^', views.request ),
+	url(r'^index/', views.request ),
 
 ]
