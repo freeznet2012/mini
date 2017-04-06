@@ -19,5 +19,7 @@ from . import views
 urlpatterns = [
     url(r'^create/', views.create, name='create'),
 	url(r'^index/', views.request ),
+	url(r'^(?P<request_id>[0-9]+)/$', views.detail, name='detail'),
+
 
 ]

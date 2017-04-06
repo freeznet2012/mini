@@ -33,3 +33,10 @@ def create(request):
 	        'reg_form.html',
 	        context={'form':form}
 	    )
+
+def detail(request, request_id):
+	list = Request.objects.filter(id=request_id)
+	return render(request,
+	        'details.html',
+	        context={'list':list},
+	    )
